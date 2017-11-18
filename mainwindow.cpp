@@ -22,7 +22,7 @@ void MainWindow::on_startButton_toggled(bool checked)
         if(starter == nullptr)
         {
             starter = new Starter();
-            starter->wake();
+            starter->start();
         }
     }
     else

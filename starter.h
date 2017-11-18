@@ -3,9 +3,6 @@
 
 #include <QObject>
 
-class Task;
-class TimerTask;
-
 class Starter : public QObject
 {
     Q_OBJECT
@@ -15,6 +12,10 @@ public:
     void start();
     void stop();
 
+private:
+    void initialOne(quint8 priorityTimer, quint8 priorityTask, quint32 cycleTime);
+    void initialAll();
+
 signals:
     void wake();
     void fin();
@@ -22,9 +23,7 @@ signals:
 public slots:
 
 private:
-    Task* task;
-    TimerTask* timerTask;
-    QThread* taskThread;
+    QList<QThread*> threads;
 };
 
 #endif // STARTER_H
