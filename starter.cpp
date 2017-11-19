@@ -1,6 +1,6 @@
 #include <QThread>
 #include "starter.h"
-#include "timerTask.h"
+#include "timertask.h"
 
 Starter::Starter(QObject *parent) : QObject(parent)
 {
